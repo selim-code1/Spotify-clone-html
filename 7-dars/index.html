@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <header class="site-header py-3 border-bottom bg-light position-fixed w-100 top-0">
+        <div class="container">
+            <div class="header-title-box text-center mb-3">
+                <h1><a class="text-decoration-none text-dark" href="./index.html">Movie App</a></h1>
+            </div>
+            <div class="header-inner-box">
+                <form class="header-search-from" id="movies-filter-form"></form>
+                <div class="row">
+                    <div class="col-3">
+                        <select class="form-select category-filter-select" form="movies-filter-form">
+                            <option value="all">All</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-control" type="text" name="search-movie" form="movies-filter-form" placeholder="Search movie">
+                    </div>
+                    <div class="col-3">
+                        <select class="form-select sort-filter-select" form="movies-filter-form">
+                            <option value="" selected disabled>Sort by movies</option>
+                            <option value="a-z">A-z</option>
+                            <option value="year">Year</option>
+                            <option value="raiting">Raiting</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-primary" type="submit" form="movies-filter-form">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <template>
+        <li class="hero-inner-item movie p-2 my-3 rounded border text-center" style="width: 32%; min-height: 400px;">
+            <img class="movie-img rounded" style="object-fit: cover;" width="330" height="200" src="https://via.placeholder.com/200x200" alt="Movie-image">
+            <h3 class="movie-name pt-3">Movie name</h3>
+            <h4 class="movie-year">Movie year</h4>
+            <a class="btn btn-success movie-trailer" href="">Trailer</a>
+        </li>
+    </template>
+    <main>
+        <section class="hero" style="margin-top: 9rem;">
+            <div class="container">
+                <ul class="hero-inner-list m-0 p-0 list-unstyled d-flex align-items-center justify-content-center flex-wrap">
+                    
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="./bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="./javascript/utils.js"></script>
+    <script src="./movies.js"></script>
+    <script src="./javascript/main.js"></script>
+</body>
+</html>
